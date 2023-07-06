@@ -36,4 +36,8 @@ def del_todo(request,id):
     todoapp.objects.get(id=id).delete()
     return redirect("view_todo")
 
+def abcd(request):
+    data1=todoapp.objects.all()
+    return render(request,'view_todo.html',{'data1':data1})
+
 
